@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Calculator</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h2>Finance Calculator</h2>
+  
+  <label>Product Price (₹): <input type="number" id="productPrice"></label><br>
+  <label>Margin Money (₹): <input type="number" id="marginMoney"></label><br>
+  <label>Interest Rate (% per year): <input type="number" id="interestRate"></label><br>
+  <label>Loan Tenure (years): <input type="number" id="loanYears"></label><br>
+
+  <h3>
+    <button type="button" onclick="toggleCharges()">Show/Hide Other Charges</button>
+  </h3>
+
+  <div id="chargesSection" style="display:none; margin-left:20px;">
+    <label>Processing Fee (%): <input type="number" id="processingFee" placeholder="e.g. 2"></label><br>
+    <label>Stamp Charges (₹): <input type="number" id="stampCharges" value="0"></label><br>
+    <label>Extra Charges (₹): <input type="number" id="extraCharges" value="0"></label><br>
+    <label>Owner Charges (₹): <input type="number" id="ownerCharges" value="0"></label><br>
+  </div>
+
+  <button onclick="calculateLoanEMI()">Calculate EMI</button>
+
+  <h3>Result</h3>
+  <div id="emiResult"></div>
+
+  <h3>Breakdown Table</h3>
+  <div id="breakdownTable"></div>
+</body>
+</html>
